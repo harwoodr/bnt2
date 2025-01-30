@@ -10,3 +10,4 @@ I plan on writing a couple of basic clients - including a terminal interface sty
 
 Right now, this is a work in progress.  Life, work, school (yes, I'm a "life-long learner" or possibly some sort of masochist) will get in the way at different points but I hope to make progress when I can.  I also invite community contributions - which I reserve the right to include or not, as I see fit.
 
+## NB: as of this writing, the game/api is not complete. 
