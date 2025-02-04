@@ -95,7 +95,7 @@ class fleetController extends basicController {
             Flight::status(404,'Fleet not found');
         }
         if($this->target->getOwnerID() == Flight::get('current_player_id')) {
-            //Flight::dump($this->request->data);
+            //player owns this fleet
             if(isset($this->request->data['sector_id']) && $this->request->data['sector_id'] != $this->target->sector->id) {
                 //use warp link to another sector TODO: ->Q
                 if (in_array($this->request->data['sector_id'],array_column($this->target->sector->link, 'destination_id'))) {
@@ -144,6 +144,9 @@ class fleetController extends basicController {
             } elseif(isset($this->request->data['purchase'])) {
                 //buy commodity from port and add it to the fleet
                 //TODO: lots (credits for one)
+                //is there an appropriate port in the same sector as the fleet?
+                //is there available commodity for sale?
+                //
             } else {
                 Flight::status(422,'No recognized operation');
             }
